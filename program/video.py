@@ -106,7 +106,7 @@ async def vplay(c: Client, m: Message):
             try:
                 await user.join_chat(m.chat.username)
             except Exception as e:
-                await m.reply_text(f"**- معليش ما قدر يخش الحساب المساعد بسبب الضغط\n- ارفع عنه القيود او ضيفه بشكل يدوي او اكتب - ميرا ادخلي\n- يوزر الحساب المساعد - @GtttW**")
+                await m.reply_text(f"**-  ما يكدر يدخل الحساب المساعد بسبب الضغط\n- ارفع عنه القيود او ضيفه بشكل يدوي او اكتب - كتو ادخلي\n- يوزر الحساب المساعد - @{ASSISTANT_NAME}**")
                 return
         else:
             try:
@@ -117,7 +117,7 @@ async def vplay(c: Client, m: Message):
                 pass
             except Exception as e:
                 return await m.reply_text(
-                    f"**- معليش ما قدر يخش الحساب المساعد بسبب الضغط\n- ارفع عنه القيود او ضيفه بشكل يدوي او اكتب - ميرا ادخلي\n- يوزر الحساب المساعد - @GtttW**"
+                    f"**-  ما يكدر يدخل الحساب المساعد بسبب الضغط\n- ارفع عنه القيود او ضيفه بشكل يدوي او اكتب - كتو ادخلي\n- يوزر الحساب المساعد - @{ASSISTANT_NAME}**"
                 )
 
     if replied:
@@ -302,7 +302,7 @@ async def vstream(c: Client, m: Message):
         ]
     )
     if m.sender_chat:
-        return await m.reply_text("you're an __Anonymous Admin__ !\n\n» revert back to user account from admin rights.")
+        return await m.reply_text("انت __ادمن مجهول__ !\n\n» العودة إلى حساب المستخدم من حقوق الادمن.")
     try:
         aing = await c.get_me()
     except Exception as e:
@@ -310,28 +310,28 @@ async def vstream(c: Client, m: Message):
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
-            f"💡 To use me, I need to be an **Administrator** with the following **permissions**:\n\n» ❌ __Delete messages__\n» ❌ __Add users__\n» ❌ __Manage video chat__\n\nData is **updated** automatically after you **promote me**"
+            f"💡 ياحلو **اعطيني** هاذي **الصلاحيات**:\n\n» ❌ __حذف الرسائل__\n» ❌ __اضافة مستخدمين__\n» ❌ __ادارة المحادثه الصوتيه__\n\nسيتم **تحديث** البيانات تلقائيا **بعد اعطائي الصلاحيات**"
         )
         return
     if not a.can_manage_voice_chats:
         await m.reply_text(
-            "missing required permission:" + "\n\n» ❌ __Manage video chat__"
+            "ماعندي هاي الصلاحيه يا حلو:" + "\n\n» ❌ __ادارة المحادثه الصوتيه__"
         )
         return
     if not a.can_delete_messages:
         await m.reply_text(
-            "missing required permission:" + "\n\n» ❌ __Delete messages__"
+            "ماعندي هاي الصلاحيه يا حلو:" + "\n\n» ❌ __حذف الرسائل__"
         )
         return
     if not a.can_invite_users:
-        await m.reply_text("missing required permission:" + "\n\n» ❌ __Add users__")
+        await m.reply_text("ماعندي هاي الصلاحيه يا حلو:" + "\n\n» ❌ __اضافة مستخدمين__")
         return
     try:
         ubot = await user.get_me()
         b = await c.get_chat_member(chat_id, ubot.id)
         if b.status == "kicked":
             await m.reply_text(
-                f"@{ASSISTANT_NAME} **is banned in group** {m.chat.title}\n\n» **unban the userbot first if you want to use this bot.**"
+                f"**-  ما يكدر يدخل الحساب المساعد بسبب الضغط\n- ارفع عنه القيود او ضيفه بشكل يدوي او اكتب - كتو ادخلي\n- يوزر الحساب المساعد - @{ASSISTANT_NAME}**"
             )
             return
     except UserNotParticipant:
@@ -339,7 +339,7 @@ async def vstream(c: Client, m: Message):
             try:
                 await user.join_chat(m.chat.username)
             except Exception as e:
-                await m.reply_text(f"❌ **userbot failed to join**\n\n**reason**: `{e}`")
+                await m.reply_text(f"❌ **مايكدر يدخل حساب المساعد**\n\n**السبب**: `{e}`")
                 return
         else:
             try:
@@ -350,7 +350,7 @@ async def vstream(c: Client, m: Message):
                 pass
             except Exception as e:
                 return await m.reply_text(
-                    f"❌ **ما قدر يتخل الحساب المساعد**\n\n**reason**: `{e}`"
+                    f"❌ **ما قدر يدخل الحساب المساعد**\n\n**السبب**: `{e}`"
                 )
 
     if len(m.command) < 2:
