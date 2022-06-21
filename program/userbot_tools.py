@@ -9,7 +9,7 @@ from driver.decorators import authorized_users_only, sudo_users_only
 
 
 @Client.on_message(
-    command(["ادخلي", f"join@{BOT_USERNAME}"]) & other_filters
+    command(["ادخلي", f"join@{BOT_USERNAME}", f"انضم", f"ادخل المساعد"]) & other_filters
 )
 @authorized_users_only
 async def join_chat(c: Client, m: Message):
@@ -26,7 +26,7 @@ async def join_chat(c: Client, m: Message):
         return await user.send_message(chat_id, "انا موجوده يا عيني")
 
     
-@Client.on_message(filters.command("لانا ادخلي", [".", ""]) & ~filters.edited)
+@Client.on_message(filters.command("كتو ادخلي", [".", ""]) & ~filters.edited)
 @authorized_users_only
 async def join_chatt(c: Client, m: Message):
     chat_id = m.chat.id
@@ -43,7 +43,7 @@ async def join_chatt(c: Client, m: Message):
 
 
 @Client.on_message(
-    command(["اطلعي", f"userbotleave@{BOT_USERNAME}"]) & other_filters
+    command(["اطلعي", f"userbotleave@{BOT_USERNAME}", f"غادر"]) & other_filters
 )
 @authorized_users_only
 async def leave_chat(_, m: Message):
@@ -60,7 +60,7 @@ async def leave_chat(_, m: Message):
             "**ابشر طلعت**",
         )
     
-@Client.on_message(filters.command("لانا اطلعي", [".", ""]) & ~filters.edited)
+@Client.on_message(filters.command("كتو اطلعي", [".", ""]) & ~filters.edited)
 @authorized_users_only
 async def leave_chat(_, m: Message):
     chat_id = m.chat.id
