@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 
-@Client.on_message(command(["روابط", f"search@NKQBoT"]))
+@Client.on_message(command(["روابط", f"search@KTOMUISCBOT", f"ابحث"]))
 async def ytsearch(_, message: Message):
 
     keyboard = InlineKeyboardMarkup(
