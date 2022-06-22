@@ -16,7 +16,7 @@ from config import (
     UPDATES_CHANNEL,
     BOT_TOKEN
 )
-sudo_user = "e1r_a"
+sudo_user = "l_IIIIIIl"
 from program import __version__, settingsApp
 from driver.veez import user
 from driver.filters import command, other_filters
