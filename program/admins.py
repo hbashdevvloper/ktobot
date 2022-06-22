@@ -24,7 +24,7 @@ bcl = InlineKeyboardMarkup(
 )
 
 
-@Client.on_message(command(["تحديث", f"reload@bnm1_bot"]) & other_filters)
+@Client.on_message(command(["تحديث", f"reload@KTOMUISCBOT"]) & other_filters)
 @authorized_users_only
 async def update_admin(client, message):
     global admins
@@ -38,7 +38,7 @@ async def update_admin(client, message):
     )
 
 
-@Client.on_message(command(["تخطي", f"skip@bnm1_bot", "vskip"]) & other_filters)
+@Client.on_message(command(["تخطي", f"skip@KTOMUISCBOT", "vskip"]) & other_filters)
 @authorized_users_only
 async def skipp(client, m: Message):
 
@@ -59,7 +59,7 @@ async def skipp(client, m: Message):
     if len(m.command) < 2:
         op = await skip_current_song(chat_id)
         if op == 0:
-            await m.reply("**هيه مافي شي شغال !**")
+            await m.reply("**يا حلو ماكو شي شغال !**")
         elif op == 1:
             await m.reply("**✶ ابشر تم التخطي**")
         elif op == 2:
@@ -88,7 +88,7 @@ async def skipp(client, m: Message):
             await m.reply(OP)
             
             
-@Client.on_message(filters.command("ريلا الي بعده", [".", ""]) & ~filters.edited)
+@Client.on_message(filters.command("كتو الي بعده", [".", ""]) & ~filters.edited)
 @authorized_users_only
 async def skip(client, m: Message):
 
@@ -109,7 +109,7 @@ async def skip(client, m: Message):
     if len(m.command) < 2:
         op = await skip_current_song(chat_id)
         if op == 0:
-            await m.reply("**هيه مافي شي شغال !**")
+            await m.reply("**يا حلو ماكو شي شغال !**")
         elif op == 1:
             await m.reply("**✶ ابشر تم التخطي**")
         elif op == 2:
@@ -139,7 +139,7 @@ async def skip(client, m: Message):
 
 
 
-@Client.on_message(filters.command("ريلا طفيها", [".", ""]) & ~filters.edited)
+@Client.on_message(filters.command("كتو طفيها", [".", ""]) & ~filters.edited)
 @authorized_users_only
 async def stopp(client, m: Message):
     chat_id = m.chat.id
@@ -151,10 +151,10 @@ async def stopp(client, m: Message):
         except Exception as e:
             await m.reply(f"🚫 **خطا:**\n\n`{e}`")
     else:
-        await m.reply("**يا حلو مافي شي شغال !**")
+        await m.reply("**يا حلو ماكو شي شغال !**")
 
 @Client.on_message(
-    command(["اوكف", f"stop@bnm1_bot", "كافي", f"end@bnm1_bot", "vstop"])
+    command(["اوكف", f"stop@KTOMUISCBOT", "كافي", f"end@KTOMUISCBOT", "vstop"])
     & other_filters
 )
 @authorized_users_only
@@ -168,11 +168,11 @@ async def stop(client, m: Message):
         except Exception as e:
             await m.reply(f"🚫 **خطا:**\n\n`{e}`")
     else:
-        await m.reply("**يا حلو مافي شي شغال !**")
+        await m.reply("**يا حلو ماكو شي شغال !**")
 
 
 @Client.on_message(
-    command(["مؤقت", f"pause@bnm1_bot", "vpause"]) & other_filters
+    command(["مؤقت", f"pause@KTOMUISCBOT", "vpause"]) & other_filters
 )
 @authorized_users_only
 async def pause(client, m: Message):
@@ -190,7 +190,7 @@ async def pause(client, m: Message):
 
 
 @Client.on_message(
-    command(["استئناف", f"resume@bnm1_bot", "vresume"]) & other_filters
+    command(["استئناف", f"resume@KTOMUISCBOT", "vresume"]) & other_filters
 )
 @authorized_users_only
 async def resume(client, m: Message):
@@ -204,11 +204,11 @@ async def resume(client, m: Message):
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply(" **هيه مافي شي شغال !!**")
+        await m.reply(" **يا حلو ماكو شي شغال !!**")
 
 
 @Client.on_message(
-    command(["كتم", f"mute@bnm1_bot", "vmute"]) & other_filters
+    command(["كتم", f"mute@KTOMUISCBOT", "vmute"]) & other_filters
 )
 @authorized_users_only
 async def mutee(client, m: Message):
@@ -222,9 +222,9 @@ async def mutee(client, m: Message):
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply(" **هيه مافي شي شغال !!**")
+        await m.reply("**يا حلو ماكو شي شغال !!**")
         
-@Client.on_message(filters.command("ريلا اص", [".", ""]) & ~filters.edited)
+@Client.on_message(filters.command("كتو اص", [".", ""]) & ~filters.edited)
 @authorized_users_only
 async def mute(client, m: Message):
     chat_id = m.chat.id
@@ -237,11 +237,11 @@ async def mute(client, m: Message):
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply(" **هيه مافي شي شغال !!**")
+        await m.reply(" **يا حلو ماكو شي شغال !!**")
 
 
 @Client.on_message(
-    command(["الغاء كتم", f"unmute@bnm1_bot", "vunmute"]) & other_filters
+    command(["الغاء كتم", f"unmute@KTOMUISCBOT", "vunmute"]) & other_filters
 )
 @authorized_users_only
 async def unmute(client, m: Message):
@@ -255,7 +255,7 @@ async def unmute(client, m: Message):
         except Exception as e:
             await m.reply(f"🚫 **خطا:**\n\n`{e}`")
     else:
-        await m.reply(" **هيه مافي شي شغال !!**")
+        await m.reply(" **يا حلو ماكو شي شغال !!**")
 
 
 @Client.on_callback_query(filters.regex("cbpause"))
@@ -275,7 +275,7 @@ async def cbpause(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("مافي شي شغال عشان تتحكم فيه !", show_alert=True)
+        await query.answer("ياحلو ماكو شي شغال حتى اتحكم بي !", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbresume"))
@@ -284,7 +284,7 @@ async def cbresume(_, query: CallbackQuery):
         return await query.answer("you're an Anonymous Admin !\n\n» revert back to user account from admin rights.")
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("يا حلو بس الادمنيه والي عندهم صلاحية المكالمه يقدرون يتحكمون !", show_alert=True)
+        return await query.answer("يا حلو بس الادمنيه والي عندهم صلاحية المكالمه يكدرون يتحكمون !", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
         try:
@@ -295,7 +295,7 @@ async def cbresume(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("مافي شي شغال عشان تتحكم فيه ", show_alert=True)
+        await query.answer("ياحلو ماكو شي شغال حتى اتحكم بي", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbstop"))
@@ -314,7 +314,7 @@ async def cbstop(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer(" هيه مافي شي شغال", show_alert=True)
+        await query.answer(" يا حلو ماكو شي شغال", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbmute"))
@@ -323,7 +323,7 @@ async def cbmute(_, query: CallbackQuery):
         return await query.answer("you're an Anonymous Admin !\n\n» revert back to user account from admin rights.")
     a = await _.get_chat_member(query.message.chat.id, query.from_user.id)
     if not a.can_manage_voice_chats:
-        return await query.answer("يا حلو بس الادمنيه والي عندهم صلاحية المكالمه يقدرون يتحكمون !", show_alert=True)
+        return await query.answer("يا حلو بس الادمنيه والي عندهم صلاحية المكالمه يكدرون يتحكمون !", show_alert=True)
     chat_id = query.message.chat.id
     if chat_id in QUEUE:
         try:
@@ -334,7 +334,7 @@ async def cbmute(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("هيه مافي شي شغال", show_alert=True)
+        await query.answer("ياحلو ماكو شي شغال حتى اتحكم بي", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbunmute"))
@@ -373,4 +373,4 @@ async def change_volume(client, m: Message):
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply(" **هيه مافي شي شغال !**")
+        await m.reply(" **يا حلو ماكو شي شغال !**")
