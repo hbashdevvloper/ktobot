@@ -93,7 +93,7 @@ def updater():
     return bool(changelog)
 
 
-@Client.on_message(command(["update", f"update@KTOMUISCBOT", f"تحديث]) & ~filters.edited)
+@Client.on_message(command(["update", f"update@KTOMUISCBOT", f"تحديث"]) & ~filters.edited)
 @sudo_users_only
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
