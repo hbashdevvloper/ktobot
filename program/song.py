@@ -45,7 +45,7 @@ def songg(_, message):
         duration = results[0]["duration"]
 
     except Exception as e:
-        m.edit("**✶ ما لقيت اغنيه بهالعنوان\n✶ او انك ما كتبت اسم الاغنيه بشكل صحيح**")
+        m.edit("**✶ لايوجد اغنيه بهاذا العنوان\n✶ او اسم الاغنيه مكتوب بشكل بغير صحيح صحيح**")
         print(str(e))
         return
     m.edit("**✶ لقيت المطلوب ..**")
