@@ -188,7 +188,7 @@ async def star_(client: Client, message: Message):
 
 @Client.on_message(filters.command("المطور", [".", ""]) & ~filters.edited)
 async def mtor_(client: Client, message: Message):
-    await message.reply_photo("https://telegra.ph/file/9ccbd3fca127c985023e6.jpg", caption=f"""▹￤D𝐞𝐯 N𝐞𝐦𝐚 ↬ X : اسكانور\n▹￤D𝐞𝐯 U𝐬𝐞𝐫 ↬ @l_IIIIIIl\n▹￤D𝐞𝐯 I𝐝 ↬ ( 2036507188 )\n▹￤D𝐞𝐯 B𝐢𝐨  ..! @l_IIIIIIl**""", 
+    await message.reply_photo("https://telegra.ph/file/ba990d4b871ce86a62acf.jpg", caption=f"""▹￤D𝐞𝐯 N𝐞𝐦𝐚 ↬صــًـًًًًٍٍـًٍـًًٍدٰوقـﮧ̯͡ــ̷ـــيᔕᗩᗪK〞𓆪†“ٰۦ \n▹￤D𝐞𝐯 U𝐬𝐞𝐫 ↬ @l_IIIIIIl\n▹￤D𝐞𝐯 I𝐝 ↬ ( 1593675355 )\n▹￤D𝐞𝐯 B𝐢𝐨 ↬ أكـص جنح النسـر ... لو طـار فـوكاها 🦅🔥♥️. **""", 
         reply_markup=InlineKeyboardMarkup(
             [
                 [
