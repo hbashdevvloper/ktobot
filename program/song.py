@@ -48,7 +48,7 @@ def songg(_, message):
         m.edit("**✶ لايوجد اغنيه بهاذا العنوان\n✶ او اسم الاغنيه مكتوب بشكل بغير صحيح صحيح**")
         print(str(e))
         return
-    m.edit("**✶ لقيت المطلوب ..**")
+    m.edit("**✶ انتضر قليلاً💞🎧 ..**")
     try:
         with yt_dlp.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -71,7 +71,7 @@ def songg(_, message):
             parse_mode="md",
             title=title,
             duration=dur,
-            performer="𝑴𝒊𝒓𝒂 𝑴𝒖𝒔𝒊𝒄 ♪"
+            performer="𝒌𝒕𝒐 𝑴𝒖𝒔𝒊𝒄 ♪"
         )
         m.delete()
     except Exception as e:
@@ -100,10 +100,10 @@ def song(_, message):
         duration = results[0]["duration"]
 
     except Exception as e:
-        m.edit("**✶ ما لقيت اغنيه بهالعنوان\n✶ او انك ما كتبت اسم الاغنيه بشكل صحيح**")
+        m.edit("**✶ لايوجد اغنيه بهالعنوان\n✶ او اسم الاغنيه مكتوب بشكل غير صحيح**")
         print(str(e))
         return
-    m.edit("**✶ لقيت المطلوب ..**")
+    m.edit("**✶ انتضر قلبلاً 💞🎧 ..**")
     try:
         with yt_dlp.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -126,7 +126,7 @@ def song(_, message):
             parse_mode="md",
             title=title,
             duration=dur,
-            performer="𝑴𝒊𝒓𝒂 𝑴𝒖𝒔𝒊𝒄 ♪"
+            performer="𝒌𝒕𝒐 𝑴𝒖𝒔𝒊𝒄 ♪"
         )
         m.delete()
     except Exception as e:
@@ -204,5 +204,5 @@ async def lyrics(_, message):
         await rep.edit(result)
     except Exception:
         await rep.edit(
-            "❌ **results of lyric not found.**\n\n» **please give a valid song name.**"
+            "❌ **لم يتم العثور على نتائج كلمات غنائية.**\n\n» **يرجى إعطاء اسم أغنية صحيح.**"
         )
