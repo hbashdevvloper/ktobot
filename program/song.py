@@ -29,7 +29,7 @@ ydl_opts = {
    # m_reply = await message.reply_text(f"**لبيه {message.from_user.mention()}\n✯ اضغط /help عشان تشوف اوامري**")
     #await m_reply_text("")
 
-@Client.on_message(command(["song", f"song@bnm1_bot"]) & ~filters.edited)
+@Client.on_message(command(["song", f"song@KTOMUISCBOT"]) & ~filters.edited)
 def songg(_, message):
     query = " ".join(message.command[1:])
     m = message.reply("**✶ ابشر ثواني بس ..**")
@@ -60,7 +60,7 @@ def songg(_, message):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
         m.edit("**✶ جاري ارسال الملف الصوتي ..**")
-        buttons = [[InlineKeyboardButton("𝗌𝗈𝗎𝗋𝖼𝖾 𝗆as", url="t.me/S_T_Dl")]]
+        buttons = [[InlineKeyboardButton("𝗌𝗈𝗎𝗋𝖼𝖾 ", url="t.me/vvvvzzv")]]
         reply_markup = InlineKeyboardMarkup(buttons)
 
         message.reply_audio(
@@ -115,7 +115,7 @@ def song(_, message):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
         m.edit("**✶ جاري ارسال الملف الصوتي ..**")
-        buttons = [[InlineKeyboardButton("𝗌𝗈𝗎𝗋𝖼𝖾 𝗆as", url="t.me/UX4SL")]]
+        buttons = [[InlineKeyboardButton("𝗌𝗈𝗎𝗋𝖼𝖾 ", url="t.me/vvvvzzv")]]
         reply_markup = InlineKeyboardMarkup(buttons)
 
         message.reply_audio(
@@ -141,7 +141,7 @@ def song(_, message):
 
 
 @Client.on_message(
-    command(["تحميل", f"vsong@bnm1_bot", "video", f"video@bnm1_bot"]) & ~filters.edited
+    command(["تحميل", f"vsong@KTOMUISCBOT", "video", f"video@KTOMUISCBOT"]) & ~filters.edited
 )
 async def vsong(client, message):
     ydl_opts = {
