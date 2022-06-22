@@ -19,7 +19,7 @@ keyboard = InlineKeyboardMarkup(
 )
 
 
-@Client.on_message(command(["القائمة", f"playlist@bnm1_bot", "queue", f"queue@{BOT_USERNAME}"]) & other_filters)
+@Client.on_message(command(["القائمة", f"playlist@KTOMUISCBOT", "queue", f"queue@{BOT_USERNAME}"]) & other_filters)
 async def playlist(client, m: Message):
    chat_id = m.chat.id
    if chat_id in QUEUE:
@@ -36,4 +36,4 @@ async def playlist(client, m: Message):
             QUE = QUE + "\n" + f"**#{x}** - [{han}]({hok}) | `{hap}`"
          await m.reply(QUE, reply_markup=keyboard, disable_web_page_preview=True)
    else:
-      await m.reply(" **تستهبل ؟\nمافي شغال عشان اطلع القائمة**")
+      await m.reply(" **تستهزء ؟\nماكو شي مشتغل حتى اطلع القائمه**")
