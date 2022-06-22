@@ -20,21 +20,21 @@ from git.exc import InvalidGitRepositoryError
 from config import UPSTREAM_REPO, BOT_USERNAME
 
     
-@Client.on_message(command(["speed", f"speedtest@{bname}"]) & ~filters.edited)
+@Client.on_message(command(["speed", f"speedtest@{bname}", f"السرعه"]) & ~filters.edited)
 async def statsguwid(_, message: Message):
-    m = await message.reply_text("Running server speedtest.")
+    m = await message.reply_text("جاࢪي اختباࢪ السࢪعه💞.")
     try:
         test = speedtest.Speedtest()
         test.get_best_server()
-        m = await m.edit("Running download speedtest..")
+        m = await m.edit("جاࢪي تشغيل اختباࢪ سࢪعة التنزيل💞🤤..")
         test.download()
-        m = await m.edit("Running upload speedtest...")
+        m = await m.edit("تشغيل اختباࢪ سࢪعة التحميل...")
         test.upload()
         test.results.share()
         result = test.results.dict()
     except Exception as e:
         return await m.edit(e)
-    m = await m.edit("Sharing speedtest results....")
+    m = await m.edit("مشاࢪكة نتائج اختباࢪ السࢪعة....")
     path = wget.download(result["share"])
 
     output = f"""💡 **SpeedTest Results**
