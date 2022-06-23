@@ -56,7 +56,7 @@ async def update_repo(_, message: Message):
     msg = await message.reply("💞🤤 جار تحديث البوت...")
     update_avail = updater()
     if update_avail:
-        await msg.edit("✅ update finished\n\n• bot restarted, back active again in 1 minutes.")
+        await msg.edit("✅ تـم تحـديث البوت\n\n• تم اعادة تشـغيل البـوت وعـاد مࢪة اخرى الى العـمل خـلال دقيـقة. واحـدة.")
         system("git pull -f && pip3 install -r requirements.txt")
         execle(sys.executable, sys.executable, "main.py", environ)
         return
