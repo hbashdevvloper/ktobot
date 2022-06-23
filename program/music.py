@@ -185,7 +185,7 @@ async def play(c: Client, m: Message):
                                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                                 await m.reply_photo(
                                     photo=thumbnail,
-                                    caption=f"💡 **تمت إضافة المسار إلى قائمة الانتظار ↫** `{pos}`\n\n🏷 **العنوان︙** [{songname}]({url})| موسيقى`\n**⏱ المدة︙** `{duration}`\n🎧 **بواسطه︙** {requester}",
+                                    caption=f"💡 **تمت إضافة المسار إلى قائمة الانتظار ↫** `{pos}`\n\n🏷 **العنوان︙** [{songname}]({url})| موسيقى\n**⏱ المدة︙** `{duration}`\n🎧 **بواسطه︙** {requester}",
                                     reply_markup=keyboard,
                                 )
                             else:
@@ -239,7 +239,7 @@ async def play(c: Client, m: Message):
                             )
                             await m.reply_photo(
                                 photo=thumbnail,
-                                caption=f"💡 **تمت إضافة المسار إلى قائمة الانتظار ↫** `{pos}`\n\n🏷 **العنوان︙** [{songname}]({url})| موسيقى`\n**⏱ المدة︙** `{duration}`\n🎧 **بواسطه︙** {requester}",
+                                caption=f"💡 **تمت إضافة المسار إلى قائمة الانتظار ↫** `{pos}`\n\n🏷 **العنوان︙** [{songname}]({url})| موسيقى\n**⏱ المدة︙** `{duration}`\n🎧 **بواسطه︙** {requester}",
                                 reply_markup=keyboard,
                             )
                         else:
