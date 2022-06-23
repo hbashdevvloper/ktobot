@@ -1,14 +1,10 @@
 import os
-import wget
-import speedtest
+import re
 import sys
 import asyncio
 import subprocess
 from asyncio import sleep
-from program.utils.formatters import bytes
-from driver.filters import command, other_filters
-from config import BOT_USERNAME as bname
-from driver.veez import bot as app
+
 from git import Repo
 from pyrogram.types import Message
 from driver.filters import command
