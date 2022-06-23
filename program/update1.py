@@ -60,7 +60,7 @@ async def update_repo(_, message: Message):
         system("git pull -f && pip3 install -r requirements.txt")
         execle(sys.executable, sys.executable, "main.py", environ)
         return
-    await msg.edit("bot is **up-to-date** with [main](https://github.com/VamBIR/musiccc)", disable_web_page_preview=True)
+    await msg.edit("✓ إعادة تشغيل البوت\n\n• الآن يمكنك استخدام هذا البوت مرة أخرى.", disable_web_page_preview=True)
 
 
 @Client.on_message(command(["restart","يستارت", f"restart@{BOT_USERNAME}"]) & ~filters.edited)
