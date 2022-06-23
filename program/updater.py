@@ -15,7 +15,7 @@ from git.exc import InvalidGitRepositoryError
 from config import UPSTREAM_REPO, BOT_USERNAME
 
     
-@Client.on_message(command(["speed", f"speedtest@{bname}", f"السرعه"]) & ~filters.edited)
+@Client.on_message(command(["speed", f"speedtest", f"السرعه"]) & ~filters.edited)
 async def statsguwid(_, message: Message):
     m = await message.reply_text("جاࢪي اختباࢪ السࢪعه💞.")
     try:
