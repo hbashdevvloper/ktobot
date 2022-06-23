@@ -12,7 +12,7 @@ from pyrogram import Client, filters
 from os import system, execle, environ
 from driver.decorators import sudo_users_only
 from git.exc import InvalidGitRepositoryError
-from config import UPSTREAM_REPO, BOT_USERNAME as bname
+from config import UPSTREAM_REPO, BOT_USERNAME
 
     
 @Client.on_message(command(["speed", f"speedtest@{bname}", f"السرعه"]) & ~filters.edited)
