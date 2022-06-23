@@ -1,7 +1,6 @@
 import os
 import wget
 import speedtest
-import re
 import sys
 import asyncio
 import subprocess
