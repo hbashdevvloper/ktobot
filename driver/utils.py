@@ -104,7 +104,7 @@ async def stream_end_handler(_, u: Update):
         print(chat_id)
         op = await skip_current_song(chat_id)
         if op == 1:
-            buttons = [[InlineKeyboardButton("‹ قناة السورس ›", url="https://t.me/S_T_Dl")]]
+            buttons = [[InlineKeyboardButton("‹ قناة السورس ›", url="https://t.me/vvvvzzv")]]
             reply_markup = InlineKeyboardMarkup(buttons)
             await bot.send_message(
                 chat_id,
