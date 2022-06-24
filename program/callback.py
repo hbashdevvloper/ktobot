@@ -89,6 +89,8 @@ async def cbcmds(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton("~ اوامر المشرفين ", callback_data="kka"),
+
+                    InlineKeyboardButton("~ اوامر المطوࢪين ", callback_data="cbsudo"),
                 
                     InlineKeyboardButton("~ اوامر الاعضاء ", callback_data="kkl")
                 ],[
@@ -112,6 +114,8 @@ async def ck(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton("~ اوامر المشرفين ", callback_data="cbadmin"),
+                   
+                    InlineKeyboardButton("~ اوامر المطوࢪين ", callback_data="cbsudo"),
                 
                     InlineKeyboardButton("~ اوامر الاعضاء ", callback_data="cbbasic")
                 ],[
